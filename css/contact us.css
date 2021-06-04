@@ -1,0 +1,287 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-style: 15px;
+  background-color: #211313;
+}
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+#loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0px 0px -75px;
+    border: 10px;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 50%;
+    border-top: 10px solid #0d3854;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-bottom {
+    position: relative;
+    display: none;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+#Start {
+    display: none;
+}
+header{
+  background: linear-gradient(to right,#79767a,#bfbac2 );
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: 5px solid ##bfbac2;
+
+}
+
+header #branding{
+  float: left;
+
+}
+header #branding h1{
+  margin: 0;
+
+}
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header a{
+  color: #0a0a0a;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+header #branding, header .active a{
+  color: #fff;
+  font-weight: bold;
+}
+
+header a:hover{
+  color: #eddd9a;
+  font-weight: bold;
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #66ccc9;
+  box-sizing: border-box;
+  padding: 40px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+.address {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: #21201f;
+  margin-bottom: 50px;
+}
+
+.inner-address p {
+  font-size: 12px;
+}
+
+.inner-address .fas {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.form-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #21201f;
+  text-align: center;
+}
+
+.input-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.inner-msg {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input > input {
+  border: 0;
+  width: 260px;
+  padding: 10px 20px;
+  outline: none;
+}
+
+.msg > textarea {
+  width: 100%;
+  border: 0;
+  padding: 10px 20px;
+  outline: none;
+  height: 80px;
+}
+
+.btn {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  color: #21201f;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn:hover{
+  background: #fff;
+  color: #6465a5;
+}
+
+
+
+.inner-social .fab {
+  margin: 0 20px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.fab:hover{
+  color: #fff;
+}
+footer{
+  padding: 36px;
+  margin-top: 40px;
+  color: #fff;
+  background: linear-gradient(to right,#79767a,#bfbac2 );
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #a9aacd;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #a9aacd;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #a9aacd;
+}
+/*responsive*/
+@media(max-width: 768px){
+    header #branding,
+    header nav,
+    header nav li
+    {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    header{
+        padding-bottom: 20px;
+    }
+
+
+@media screen and (max-width: 640px) {
+  .input-form {
+    flex-direction: column;
+  }
+  .input:first-child > input {
+    margin-bottom: 20px;
+  }
+  .form .input > input {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .address {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inner-address {
+    margin-bottom: 20px;
+  }
+
